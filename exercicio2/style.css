@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;/*% olha pro elemento pai*/
+}
+
+main{
+    border: 1px solid coral;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+section{
+    border: 1px solid black;
+    width: 33vw;/*vw e vh olham para a tela*/
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;/*só funciona se definir como display flex*/
+    align-items: center;
+}
+
+/*Define uma regra de mídia para telas com uma largura máxima de 480px*/
+@media screen and (max-device-width: 480px){
+/*device enchega a tela do dispositivo*/
+/*max-device-width: 480px . na tela do navegador*/
+    main{
+        
+        flex-direction: column;/*quando diminuir desse valor vai mudar para coluna*/
+    }
+    section{
+        width: 100vh;
+        align-items: start;
+        color: red;
+    }
+    
+    
+}
